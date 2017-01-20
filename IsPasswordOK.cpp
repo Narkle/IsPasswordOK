@@ -2,14 +2,7 @@
 #include <string.h>
 #include <iostream>
 #include <cstdlib>
-using namespace std;
-
-//This is the IsPasswordOK function
-bool IsPasswordOK(void) {
-        char Password[12];
-        gets(Password);
-        return 0 == strcmp(Password, "goodpass");
-}
+#include "PassCheck.h"
 
 //This is the main funtion
 int main(void) {
@@ -17,7 +10,7 @@ int main(void) {
         int a,b;
         a=10; b=0;
         puts("Enter password:");
-        PwStatus = IsPasswordOK();
+        PwStatus = IsPasswordOKs();
         if (PwStatus == false) {
                 puts("Access denied");
                 printf("This is an Error: %d\n",a/b);
